@@ -29,10 +29,15 @@ export interface PendingChange {
   queuedAt: string;
 }
 
+export interface HistorySnapshot {
+  items: RundownItem[];
+  makeup: RundownItem[];
+}
+
 export interface HistoryEntry {
   id: string;
   label: string;
   detail: string;
   time: string;
-  snapshot: RundownItem[];
+  snapshot: HistorySnapshot;
 }
